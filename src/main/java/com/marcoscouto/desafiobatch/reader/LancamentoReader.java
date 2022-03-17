@@ -1,6 +1,6 @@
 package com.marcoscouto.desafiobatch.reader;
 
-import com.marcoscouto.desafiobatch.data.Lancamento;
+import com.marcoscouto.desafiobatch.data.LancamentoDTO;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
@@ -14,14 +14,14 @@ public class LancamentoReader {
 
     @Bean
     @StepScope
-    public FlatFileItemReader<Lancamento> leituraDeArquivoDeLancamento(
+    public FlatFileItemReader<LancamentoDTO> leituraDeArquivoDeLancamento(
             @Value("#{jobParameters['arquivosLancamentos']}") Resource resource) {
-        return new FlatFileItemReaderBuilder<Lancamento>()
+        return new FlatFileItemReaderBuilder<LancamentoDTO>()
                 .name("leituraDeArquivoDeLancamento")
                 .resource(resource)
                 .delimited()
                 .names("codigoNaturezaDespesa", "descricaoNaturezaDespesa", "descricaoLancamento", "dataLancamento", "valorLancamento")
-                .targetType(Lancamento.class)
+                .targetType(LancamentoDTO.class)
                 .build();
     }
 

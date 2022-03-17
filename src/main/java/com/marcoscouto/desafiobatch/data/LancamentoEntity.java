@@ -1,14 +1,41 @@
 package com.marcoscouto.desafiobatch.data;
 
-import java.time.LocalDate;
+import javax.persistence.*;
 
-public class Lancamento {
+@Entity
+@Table(name = "lancamento")
+public class LancamentoEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "codigo_natureza_despesa")
     private Integer codigoNaturezaDespesa;
+
+    @Column(name = "descricao_natureza_despesa")
     private String descricaoNaturezaDespesa;
+
+    @Column(name = "descricao_lancamento")
     private String descricaoLancamento;
+
+    @Column(name = "data_lancamento")
     private String dataLancamento;
+
+    @Column(name = "valor_lancamento")
     private Double valorLancamento;
+
+    public LancamentoEntity() {
+    }
+
+    public LancamentoEntity(Integer codigoNaturezaDespesa, String descricaoNaturezaDespesa, String descricaoLancamento, String dataLancamento, Double valorLancamento) {
+        this.codigoNaturezaDespesa = codigoNaturezaDespesa;
+        this.descricaoNaturezaDespesa = descricaoNaturezaDespesa;
+        this.descricaoLancamento = descricaoLancamento;
+        this.dataLancamento = dataLancamento;
+        this.valorLancamento = valorLancamento;
+    }
 
     public Integer getCodigoNaturezaDespesa() {
         return codigoNaturezaDespesa;
@@ -52,7 +79,7 @@ public class Lancamento {
 
     @Override
     public String toString() {
-        return "Lancamento{" +
+        return "LancamentoEntity{" +
                 "codigoNaturezaDespesa=" + codigoNaturezaDespesa +
                 ", descricaoNaturezaDespesa='" + descricaoNaturezaDespesa + '\'' +
                 ", descricaoLancamento='" + descricaoLancamento + '\'' +
