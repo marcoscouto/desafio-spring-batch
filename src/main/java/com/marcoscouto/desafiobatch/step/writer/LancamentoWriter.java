@@ -1,4 +1,4 @@
-package com.marcoscouto.desafiobatch.writer;
+package com.marcoscouto.desafiobatch.step.writer;
 
 import com.marcoscouto.desafiobatch.data.LancamentoEntity;
 import com.marcoscouto.desafiobatch.repository.LancamentoRepository;

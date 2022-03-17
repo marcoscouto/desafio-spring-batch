@@ -2,7 +2,6 @@ package com.marcoscouto.desafiobatch.step;
 
 import com.marcoscouto.desafiobatch.data.LancamentoDTO;
 import com.marcoscouto.desafiobatch.data.LancamentoEntity;
-import com.marcoscouto.desafiobatch.reader.LancamentoReader;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemWriter;

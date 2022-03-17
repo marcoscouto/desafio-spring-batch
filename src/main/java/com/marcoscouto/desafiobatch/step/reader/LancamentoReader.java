@@ -1,4 +1,4 @@
-package com.marcoscouto.desafiobatch.reader;
+package com.marcoscouto.desafiobatch.step.reader;
 
 import com.marcoscouto.desafiobatch.data.LancamentoDTO;
 import org.springframework.batch.core.configuration.annotation.StepScope;

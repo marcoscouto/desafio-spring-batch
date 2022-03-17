@@ -1,4 +1,4 @@
-package com.marcoscouto.desafiobatch.processor;
+package com.marcoscouto.desafiobatch.step.processor;
 
 import com.marcoscouto.desafiobatch.data.LancamentoDTO;
 import com.marcoscouto.desafiobatch.data.LancamentoEntity;
